@@ -18,7 +18,9 @@ defineProps({
         <p class="mb-5">
                  Fun 
             </p> 
-        <button class="btn btn-primary">Get Started</button>
+            <router-link to="Splash" class="nav-item nav-link" active-class="active" exact>
+                <button class="btn btn-primary">Get Started</button>
+            </router-linK>
         </div>
     </div>
     </div>

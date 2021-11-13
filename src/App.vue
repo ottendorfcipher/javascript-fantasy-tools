@@ -11,7 +11,7 @@ import Footer from './components/Footer.vue'
 
 <template>
   <Header />
-  <component :is="Splash"></component>
+  <Splash />
   <Footer />
 </template>
 
