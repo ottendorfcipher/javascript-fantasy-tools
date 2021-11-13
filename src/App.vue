@@ -3,12 +3,15 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Header from './components/Header.vue'
 import Splash from './components/Splash.vue'
+import Form from './components/Form.vue'
+import Responses from './components/Responses.vue'
 import Footer from './components/Footer.vue'
+
 </script>
 
 <template>
   <Header />
-  <Splash />
+  <component :is="Splash"></component>
   <Footer />
 </template>
 

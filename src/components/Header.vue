@@ -17,10 +17,10 @@ defineProps({
       </div> 
       <div class="hidden px-2 mx-2 navbar-center lg:flex">
         <div class="flex items-stretch">
-          <a class="btn btn-ghost btn-sm rounded-btn" >
+          <a class="btn btn-ghost btn-sm rounded-btn" @onclick="form-method" >
                   Form
                 </a> 
-          <a class="btn btn-ghost btn-sm rounded-btn">
+          <a class="btn btn-ghost btn-sm rounded-btn" @onclick="responses-method">
                   Responses
                 </a> 
         </div>
