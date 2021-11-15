@@ -16,7 +16,7 @@ const addNpc = (ev)=>{
         favColorTwo: document.getElementById('favColorTwo').value,
         hairStyle: document.getElementById('hairStyle').value
     }
-    
+
     npcChar.push(npc);
     document.forms[0].reset(); 
 
@@ -30,7 +30,6 @@ const addNpc = (ev)=>{
     document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('btn').addEventListener('click', addNpc);
 });
-
 
 
 // NPC Color Options
