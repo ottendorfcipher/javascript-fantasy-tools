@@ -18,17 +18,17 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Project Management App</a>
+              <a class="navbar-brand main-font" href="index.html">Project Management App</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="collapse navbar-collapse main-font" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="form.html">Form</a>
+                    <a class="nav-link active" href="form.html">Form</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="responses.html">Responses</a>
@@ -39,13 +39,13 @@
           </nav>
         <!-- Page content-->
         <div class="container">
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 main-font">
                 <h1>Build Your Own Fantasy World NPC</h1>
                 <p>A non-player character (NPC) is any character in a game that is not controlled by a player.</p>
             </div>
               <!-- Main Form Section-->
             <section class="hero-banner bg-light py-5">
-              <form>
+              <form id="npcForm">
 
                   <!-- Row 1: Name Row-->
                 <div class="row mx-3 d-flex justify-content-center">
@@ -111,15 +111,20 @@
                 <div class="row mx-3 mt-3 d-flex justify-content-center">
 
                 </div>
-
-
-
-
-
+                <div class="text-center">
+                  <a href="form.html" class="mt-4 btn btn-outline-secondary btn-lg border main-font">Submit</a>
+                </div>
               </form>
             </section>
-
         </div>
+          <!-- Footer-->
+        <footer class="bg-light text-center text-lg-start mt-5">
+          <!-- Copyright -->
+          <div class="text-center p-3 main-font" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 | Nick Weiner
+          </div>
+          <!-- Copyright -->
+        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
