@@ -10,16 +10,6 @@ As a simple proof-of-concept, the project will store user-inputted data about a 
 Responses will also have a graphical visual representation.
 
 
-
-
 Initial project build based on Bootstrap Bare by Start Bootstrap (https://github.com/StartBootstrap/startbootstrap-bare)
-
-
-#### npm Scripts
-
-* `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
-* `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
-
-Note: You must have npm installed in order to use this build environment.
 
 
