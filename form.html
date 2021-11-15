@@ -18,7 +18,7 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container-fluid">
-              <a class="navbar-brand main-font" href="index.html">Project Management App</a>
+              <a class="navbar-brand main-font" href="index.html">Project Management Tool</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -40,22 +40,21 @@
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5 main-font">
-                <h1>Build Your Own Fantasy World NPC</h1>
-                <p>A non-player character (NPC) is any character in a game that is not controlled by a player.</p>
+                <h1>Build Your Own Fantasy World Character</h1>
             </div>
               <!-- Main Form Section-->
             <section class="hero-banner bg-light py-5">
-              <form id="npcForm">
+              <form method="post" action="toJSON.php">
 
                   <!-- Row 1: Name Row-->
                 <div class="row mx-3 d-flex justify-content-center">
                   <div class="col-md-4">
                     <label class="mb-1" for="first-name">First Name:</label>
-                    <input type="text" id="first-name" class="form-control">
+                    <input type="text" id="first-name" name="firstName" class="form-control">
                   </div>
                   <div class="col-md-4">
                     <label class="mb-1" for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" class="form-control">
+                    <input type="text" id="last-name" name="lastName" class="form-control">
                   </div>
                 </div>
 
@@ -63,23 +62,23 @@
                 <div class="row mx-3 mt-3 d-flex justify-content-center">
                   <div class="col-md-2">
                     <label class="mb-1" for="age">Age</label>
-                    <input type="text" id="age" class="form-control">
+                    <input type="text" id="age" name="age" class="form-control">
                   </div>
                   <div class="col-md-2">
                     <label class="mt-4" for="hairColor">Hair Color</label>
-                    <select class="custom-select my-1 mr-sm-2" id="hairColor">
+                    <select class="custom-select my-1 mr-sm-2" name="hairColor" id="hairColor">
                       <option selected>Choose...</option>
                     </select>
                   </div>
                   <div class="col-md-2">
                     <label class="mt-4" for="eyeColor">Eye Color</label>
-                    <select class="custom-select my-1 mr-sm-2" id="eyeColor">
+                    <select class="custom-select my-1 mr-sm-2" name="eyeColor" id="eyeColor">
                       <option selected>Choose...</option>
                     </select>
                   </div>
                   <div class="col-md-2">
                     <label class="mt-4" for="complexion">Complexion</label>
-                    <select class="custom-select my-1 mr-sm-2" id="complexion">
+                    <select class="custom-select my-1 mr-sm-2" name="complexion" id="complexion">
                       <option selected>Choose...</option>
                     </select>
                   </div>
@@ -89,19 +88,19 @@
                 <div class="row mx-3 mt-3 d-flex justify-content-center">
                   <div class="col-md-2">
                     <label class="mt-4" for="favColorOne">Favorite Color #1</label>
-                    <select class="custom-select my-1 mr-sm-2" id="favColorOne">
+                    <select class="custom-select my-1 mr-sm-2" name="favColorOne" id="favColorOne">
                       <option selected>Choose...</option>
                     </select>
                   </div>
                   <div class="col-md-2">
                     <label class="mt-4" for="favColorTwo">Favorite Color #2</label>
-                    <select class="custom-select my-1 mr-sm-2" id="favColorTwo">
+                    <select class="custom-select my-1 mr-sm-2" name="favColorTwo" id="favColorTwo">
                       <option selected>Choose...</option>
                     </select>
                   </div>
                   <div class="col-md-2">
                     <label class="mt-4" for="hairStyle">Hair Style</label>
-                    <select class="custom-select my-1 mr-sm-2" id="hairStyle">
+                    <select class="custom-select my-1 mr-sm-2" name="hairStyle" id="hairStyle">
                       <option selected>Choose...</option>
                     </select>
                   </div>
@@ -112,7 +111,7 @@
 
                 </div>
                 <div class="text-center">
-                  <a href="form.html" class="mt-4 btn btn-outline-secondary btn-lg border main-font">Submit</a>
+                  <a href="form.html" id="submitNpcForm" class="mt-4 btn btn-outline-secondary btn-lg border main-font">Submit</a>
                 </div>
               </form>
             </section>
@@ -127,6 +126,8 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

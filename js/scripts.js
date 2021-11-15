@@ -1,25 +1,4 @@
 
-// Form Convert to JSON
-
-const formElement = document.querySelector('form')
-const getFormJSON = (form) => {
-    const data = new FormData(form);
-    return Array.from(data.keys()).reduce((result, key) => {
-      result[key] = data.get(key);
-      return result;
-    }, {});
-  };
-
-  const handler = (event) => {
-    event.preventDefault();
-    const valid = formElement.reportValidity();
-    if (valid) {
-      const result = getFormJSON(formElement);
-      console.log(result)
-    }
-  }
-
-  formElement.addEventListener("submit", handler)
 
 // NPC Color Options
 let colorOptions = ["1","2","3","4","5"];
