@@ -27,6 +27,7 @@ const addNpc = (ev)=>{
 
     localStorage.setItem('userGeneratedNpc', JSON.stringify(npcChar) );
 }
+
     document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('btn').addEventListener('click', addNpc);
 });
