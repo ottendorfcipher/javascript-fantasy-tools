@@ -1,13 +1,23 @@
 {
+  "name": "dev-api-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinkprince/dev-api-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justinkprince/dev-api-example/issues"
+  },
+  "homepage": "https://github.com/justinkprince/dev-api-example#readme",
   "dependencies": {
-    "@justinkprince/dev-api": "^1.7.0",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-rate-limit": "^5.5.1",
-    "helmet": "^4.6.0",
-    "nodejs": "^0.0.0",
-    "require.js": "^1.0.0",
-    "sqlite3": "^5.0.2",
-    "wamp-server": "^0.0.9"
+    "@justinkprince/dev-api": "^1.7.0"
   }
 }

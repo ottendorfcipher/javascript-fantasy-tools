@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" rel="stylesheet" />
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <script src="./assets/js/api.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+
+      <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand main-font" href="index.html">Project Management Tool</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse main-font" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="form.html">Form</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="text-center mt-5 main-font">
+        <h1>Build Your Own Fantasy World Character</h1>
+      </div>
+
+          <form id="user-form">
+            <fieldset>
+              <div class="row mx-3 d-flex justify-content-center">
+                <div class="col-md-4">
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" type="text" name="firstName" placeholder="Ex: Flavius" class="form-control" />
+
+                  <label for="lastName">Last Name</label>
+                  <input id="lastName" type="text" name="lastName" placeholder="Ex: Cornelius" class="form-control" />
+                </div>
+              </div>
+              <div class="row mx-3 mt-3 d-flex justify-content-center">
+                <div class="col-md-2">
+                  <label for="age">Age</label>
+                  <input id="age" type="text" name="age" placeholder="Ex: 28" class="form-control" />
+                </div>
+                <div class="col-md-2">
+                  <label for="hairColor">Hair Color</label>
+                  <select id="hairColor" type="text" name="hairColor" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="eyeColor">Eye Color</label>
+                  <select id="eyeColor" type="text" name="eyeColor" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mx-3 mt-3 d-flex justify-content-center">
+                <div class="col-md-2">
+                  <label for="complexion">Complexion</label>
+                  <select id="complexion" type="text" name="complexion" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="favColorOne">Favorite Color #1</label>
+                  <select id="favColorOne" type="text" name="favColorOne" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="favColorTwo">Favorite Color #2</label>
+                  <select id="favColorTwo" type="text" name="favColorTwo" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label for="hairStyle">Hair Style</label>
+                  <select id="hairStyle" type="text" name="hairStyle" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mx-3 mt-3 d-flex justify-content-center">
+                <div class="col-md-1 mb-3">
+                  <button class="btn btn-outline-primary">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="row">
+            <div id="log" class="log col-sm-8" style="margin: auto; height: 8vh;">
+
+            </div>
+          </div>
+          <div class="row">
+            <button id="clear-log-btn" class="col-sm-2 mt-3 btn btn-outline-danger" style="margin: auto;">Clear</button>
+          </div>
+        </div>
+
+        <div id="user-list-container" class="user-list-container mt-4">
+          <h4 class="msg-no-users">There are no users to display</h4>
+
+          <table class="user-list-table table table-striped">
+            <thead>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              <th>Hair Color</th>
+              <th>Eye Color</th>
+              <th>Complexion</th>
+              <th>Favorite Color One</th>
+              <th>Favorite Color Two</th>
+              <th>Hair Style</th>
+              <th></th>
+            </thead>
+            <tbody id="user-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <template id="user-template">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button class="delete-btn">Delete</button>
+        </td>
+      </tr>
+    </template>
+
+    <!-- Footer-->
+    <footer class="bg-light text-center text-lg-start mt-5">
+      <!-- Copyright -->
+      <div class="text-center p-3 main-font" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 | Nick Weiner
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="assets/js/scripts.js"></script>
+  </body>
+
+</html>

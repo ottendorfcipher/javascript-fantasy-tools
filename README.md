@@ -1,6 +1,16 @@
 
 # Project Management App
 
+## Installation
+
+Run `npm install`.
+
+## Running the App
+
+Run `npm start`. A URL will be shown in the terminal that will be the URL of the API server.
+
+Open the `public/index.html` file either directly in your browser or with Live Server (VS Code).
+
 ## About
 
 This is a custom app built for the primary of creating, viewing, modifying, and exporting data into the .json format. From there, certain types of data are tagged to be viewed by certain people. 
