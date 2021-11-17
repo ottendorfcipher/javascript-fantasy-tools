@@ -5,11 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Form" />
         <meta name="author" content="Nick Weiner" />
+
         <title>Project Management Tool</title>
+
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
         <link href="css/bootstrap.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
+
+        <script src="js/api.js" defer></script>
+        <script src="js/main.js" defer></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -44,7 +51,7 @@
             </div>
               <!-- Main Form Section-->
             <section class="hero-banner bg-light py-5">
-              <form method="post" action="toJSON.php">
+              <form id="npcForm">
 
                   <!-- Row 1: Name Row-->
                 <div class="row mx-3 d-flex justify-content-center">
@@ -107,14 +114,21 @@
                 </div>
 
                   <!-- Row 4: ______ Row-->
-                <div id="msg">
-                  <pre></pre>
-                </div>
                 <div class="text-center">
                   <a href="form.html" id="btn" class="mt-4 btn btn-outline-secondary btn-lg border main-font">Submit</a>
                 </div>
               </form>
             </section>
+
+          <div class="text-center mt-3">
+            <strong><p>View Submissions as a JavaScript Object:</p></strong>
+            <div id="msg" class="text-center">
+              <pre></pre>
+            </div>
+            
+            <br>*Note for Developers: Local Storage</p>
+          </div>
+
         </div>
           <!-- Footer-->
         <footer class="bg-light text-center text-lg-start mt-5">

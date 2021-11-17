@@ -1,5 +1,4 @@
 // Create NPC Object 
-
 let npcChar = [];
 
 const addNpc = (ev)=>{
