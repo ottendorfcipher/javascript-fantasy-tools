@@ -23,6 +23,8 @@ Responses will also have a graphical visual representation.
 
 1. Read and parse an external file (such as JSON or CSV) into your application and display some data from that in your app
 
+
+
 2. Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application
 
 Location: ` public/assets/js/scripts.js ` & ` public/form.html `

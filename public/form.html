@@ -49,77 +49,148 @@
           <form id="npcForm">
             <fieldset>
               <div class="row mx-3 d-flex justify-content-center">
-                <div class="col-md-4">
-                  <label for="firstName">First Name</label>
-                  <input id="firstName" type="text" name="firstName" placeholder="Ex: Flavius" class="form-control" />
-
-                  <label for="lastName">Last Name</label>
-                  <input id="lastName" type="text" name="lastName" placeholder="Ex: Cornelius" class="form-control" />
+                <div class="col-md-3">
+                  <label for="firstName" class="fantasy-font">First Name</label>
+                  <input id="firstName" type="text" name="firstName" placeholder="Ex: Flavius" class="form-control main-font" />
+                </div>
+                <div class="col-md-3">
+                  <label for="lastName" class="fantasy-font">Last Name</label>
+                  <input id="lastName" type="text" name="lastName" placeholder="Ex: Cornelius" class="form-control main-font" />
+                </div>
+                <div class="col-md-3">
+                  <label for="age" class="fantasy-font">Age</label>
+                  <input id="age" type="text" name="age" placeholder="Ex: 28" class="form-control main-font" />
                 </div>
               </div>
               <div class="row mx-3 mt-3 d-flex justify-content-center">
-                <div class="col-md-2">
-                  <label for="age">Age</label>
-                  <input id="age" type="text" name="age" placeholder="Ex: 28" class="form-control" />
-                </div>
-                <div class="col-md-2">
-                  <label for="hairColor">Hair Color</label>
-                  <select id="hairColor" type="text" name="hairColor" class="form-control">
+                <div class="col-md-3">
+                  <div id = "hairColorVisual" class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="hairColor" class="fantasy-font">Hair Color</label>
+                  <select id="hairColor" type="text" onchange="changeHairColor(this)" name="hairColor" class="form-control main-font">
                     <option selected>Choose...</option>
                   </select>
                 </div>
-                <div class="col-md-2">
-                  <label for="eyeColor">Eye Color</label>
-                  <select id="eyeColor" type="text" name="eyeColor" class="form-control">
+                <div class="col-md-3">
+                  <div id = "eyeColorVisual" class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="eyeColor" class="fantasy-font">Eye Color</label>
+                  <select id="eyeColor" type="text" onchange="changeEyeColor(this)" name="eyeColor" class="form-control main-font">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <div id = "complexionVisual" class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="complexion" class="fantasy-font">Complexion</label>
+                  <select id="complexion" type="text" onchange="selectComplexion(this)" name="complexion" class="form-control main-font">
+                    <option selected>Choose...</option>
+                    <option value="#e8cba7">Ivory</option>
+                    <option value="#edd0b8">Porcelain</option>
+                    <option value="#f7ddc4">Pale Ivory</option>
+                    <option value="#f7e2ab">Warm Ivory</option>
+                    <option value="#efc794">Sand</option>
+                    <option value="#efc088">Rose Beige</option>
+                    <option value="#e7bc91">Limestone</option>
+                    <option value="#ecc083">Beige</option>
+                    <option value="#d09e7d">Senna</option>
+                    <option value="#cb9662">Honey</option>
+                    <option value="#aa8b64">Band</option>
+                    <option value="#cb9662">Almond</option>
+                    <option value="#885633">Chesnut</option>
+                    <option value="#76441e">Bronze</option>
+                    <option value="#b26949">Umber</option>
+                    <option value="#80492a">Golden</option>
+                    <option value="#623a17">Espresso</option>
+                    <option value="#301e10">Chocolate</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mx-3 mt-3 d-flex justify-content-center">
+                <div class="col-md-3">
+                  <div id = "favColorOneVisual" class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="favColorOne" class="fantasy-font">Favorite Color #1</label>
+                  <select id="favColorOne" type="text" onchange="changeFavColorOne(this)" name="favColorOne" class="form-control main-font">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <div id = "favColorTwoVisual" class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="favColorTwo" class="fantasy-font">Favorite Color #2</label>
+                  <select id="favColorTwo" type="text" onchange="changeFavColorTwo(this)" name="favColorTwo" class="form-control main-font">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="hairStyle" class="fantasy-font">Hair Style</label>
+                  <select id="hairStyle" type="text" name="hairStyle" class="form-control main-font">
                     <option selected>Choose...</option>
                   </select>
                 </div>
               </div>
               <div class="row mx-3 mt-3 d-flex justify-content-center">
-                <div class="col-md-2">
-                  <label for="complexion">Complexion</label>
-                  <select id="complexion" type="text" name="complexion" class="form-control">
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="npcHeight" class="fantasy-font">Height</label>
+                  <select id="npcHeight" type="text" name="npcHeight" class="form-control main-font">
                     <option selected>Choose...</option>
                   </select>
                 </div>
-                <div class="col-md-2">
-                  <label for="favColorOne">Favorite Color #1</label>
-                  <select id="favColorOne" type="text" name="favColorOne" class="form-control">
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="npcWeight" class="fantasy-font">Weight</label>
+                  <select id="npcWeight" type="text" name="npcWeight" class="form-control main-font">
                     <option selected>Choose...</option>
                   </select>
                 </div>
-                <div class="col-md-2">
-                  <label for="favColorTwo">Favorite Color #2</label>
-                  <select id="favColorTwo" type="text" name="favColorTwo" class="form-control">
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="npcClass" class="fantasy-font">Player Class</label>
+                  <select id="npcClass" type="text" name="npcClass" class="form-control main-font">
                     <option selected>Choose...</option>
                   </select>
                 </div>
-                <div class="col-md-2">
-                  <label for="hairStyle">Hair Style</label>
-                  <select id="hairStyle" type="text" name="hairStyle" class="form-control">
+              </div>
+              <div class="row mx-3 mt-3 d-flex justify-content-center">
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="primaryAttack" class="fantasy-font">Primary Attack</label>
+                  <select id="primaryAttack" type="text" name="primaryAttack" class="form-control main-font">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="secondaryAttack" class="fantasy-font">Secondary Attack</label>
+                  <select id="secondaryAttack" type="text" name="secondaryAttack" class="form-control main-font">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <div class="col-md-2 mb-2" style="height: 40px; width: 40px; margin: auto;"></div>
+                  <label for="specialAbility" class="fantasy-font">Special Ability</label>
+                  <select id="specialAbility" type="text" name="specialAbility" class="form-control main-font">
                     <option selected>Choose...</option>
                   </select>
                 </div>
               </div>
               <div class="row mx-3 mt-3 d-flex justify-content-center">
                 <div class="col-md-1 mb-3">
-                  <button class="btn btn-outline-primary">Submit</button>
+                  <button class="btn btn-outline-primary main-font">Submit</button>
                 </div>
               </div>
             </fieldset>
           </form>
           <div class="row">
-            <div id="log" class="log col-sm-8" style="margin: auto; height: 8vh;">
+            <div id="log" class="log col-sm-8 main-font" style="margin: auto; height: 8vh;">
 
             </div>
           </div>
           <div class="row">
-            <button id="clear-log-btn" class="col-sm-2 mt-3 btn btn-outline-danger" style="margin: auto;">Clear</button>
+            <button id="clear-log-btn" class="col-sm-2 mt-3 btn btn-outline-danger main-font" style="margin: auto;">Clear</button>
           </div>
         </div>
 
         <div id="user-list-container" class="user-list-container mt-4">
-          <h4 class="msg-no-users">There are no users to display</h4>
+          <h4 class="msg-no-users main-font">No NPCs Currently Displayed</h4>
 
           <table class="user-list-table table table-striped">
             <thead>
@@ -171,6 +242,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="assets/js/scripts.js"></script>
+    <!-- Colors JS-->
+    <script src="assets/js/colors.js"></script>
   </body>
 
 </html>

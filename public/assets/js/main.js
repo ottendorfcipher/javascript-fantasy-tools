@@ -1,8 +1,8 @@
-// Most of the DOM elements that will be interacted with.
-const userForm = document.getElementById("npcForm");
-const userListContainer = document.getElementById("user-list-container");
-const userList = document.getElementById("user-list");
-const userTemplate = document.getElementById("user-template");
+// DOM elements that will be interacted with.
+const npcForm = document.getElementById("npcForm");
+const npcListContainer = document.getElementById("user-list-container");
+const npcList = document.getElementById("user-list");
+const npcTemplate = document.getElementById("user-template");
 const logger = document.getElementById("log");
 
 // An instance of the API helper class.
@@ -22,17 +22,15 @@ document.getElementById("clear-log-btn").addEventListener("click", () => {
 
 // Create a single table row populated with user data.
 const createUserTableRow = (user) => {
-  // Content templates are a convenient way to add complex HTML structures
-  // that contain dynamic data to the DOM.
-  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
-  const tr = userTemplate.content.cloneNode(true);
+ 
+  const tr = npcTemplate.content.cloneNode(true);
   const td = tr.querySelectorAll("td");
 
   // Set the first cell to the user ID (truncated down to 6 characters).
   td[0].textContent = `${user.id.slice(0, 6)}...`;
   // Show the full user ID on mouse hover.
   td[0].title = user.id;
-  // Set the second cell to the user name.
+  
   td[1].textContent = user.firstName;
   td[2].textContent = user.lastName;
   td[3].textContent = user.age;
@@ -42,6 +40,7 @@ const createUserTableRow = (user) => {
   td[7].textContent = user.favColorOne;
   td[8].textContent = user.favColorTwo;
   td[9].textContent = user.hairStyle;
+
   // Add the user ID as the delete button's ID for convenience later on.
   td[10].querySelector("button").id = user.id;
 
@@ -50,11 +49,7 @@ const createUserTableRow = (user) => {
 
 // Create several table rows with a collection of user data.
 const createUserTableRows = (users) => {
-  // DocumentFragment objects are great for adding several objects
-  // to the DOM via iteration. Touching the DOM can be an expensive
-  // operation and DocumentFragment objects allow us to add lots of
-  // elements to the DOM with one single interaction.
-  // https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment
+
   const fragment = new DocumentFragment();
 
   // Iterate over the provided users argument.
@@ -69,7 +64,7 @@ const createUserTableRows = (users) => {
 };
 
 // Fetch user data from API and update the user list in the DOM.
-const updateUserList = () => {
+const updateNpcList = () => {
   api.get("/users").then((response) => {
     const users = response.data;
     const hasUsers = users.length > 0;
@@ -79,36 +74,33 @@ const updateUserList = () => {
       // Get a DocumentFragment containing table rows of user data.
       const tr = createUserTableRows(users);
       // Replace all the children of the tbody element with our new user rows.
-      userList.replaceChildren(tr);
+      npcList.replaceChildren(tr);
     }
 
     log(`Fetched ${users.length} users.`);
     // Set the class that determines if the "no users" message is displayed or not.
-    userListContainer.classList.toggle("has-users", hasUsers);
+    npcListContainer.classList.toggle("has-users", hasUsers);
   });
 };
 
 // Click listener for deleting users.
-// Using event delegation here so we don't have to add a new event handler for
-// every new button that is created. The parent listens for events, checks if
-// the target is a delete button, and then reacts accordingly.
-// https://davidwalsh.name/event-delegate
-userList.addEventListener("click", (event) => {
+
+npcList.addEventListener("click", (event) => {
   const target = event.target;
   if (target.className === "delete-btn") {
     const resource = `/users/${target.id}`;
     api.delete(resource).then((response) => console.log(response));
     log(`Delete user with ID: ${target.id}`);
-    updateUserList();
+    updateNpcList();
   }
 });
 
 // Listener for creating new users.
-userForm.addEventListener("submit", (event) => {
-  // By default, forms reload the page on submit. We want to prevent that.
+npcForm.addEventListener("submit", (event) => {
+  // Prevent reload on submit
   event.preventDefault();
 
-  // Get the value of the name field.
+  // Get the value of the fields.
   const firstName = event.target.elements["firstName"].value;
   const lastName = event.target.elements["lastName"].value;
   const age = event.target.elements["age"].value;
@@ -123,12 +115,12 @@ userForm.addEventListener("submit", (event) => {
   // Send a POST request with the data to the API.
   api.post("/users", { firstName , lastName, age, hairColor, eyeColor, complexion, favColorOne, favColorTwo, hairStyle }).then((response) => {
     log(`Create new user: ${response.firstName}`);
-    // Update the list of users now that it has changed.
-    updateUserList();
+    // Update the list of NPCs now that it has changed.
+    updateNpcList();
   });
   // Clear out the input field of its previous value.
-  userForm.reset();
+  npcForm.reset();
 });
 
-// Populate the user list upon page load.
-updateUserList();
+// Populate the user list on page load.
+updateNpcList();
