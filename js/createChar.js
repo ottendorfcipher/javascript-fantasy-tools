@@ -5,8 +5,8 @@ const addNpc = (ev)=>{
     ev.preventDefault();
     let npc = {
         id: Date.now(),
-        firstName: document.getElementById('first-name').value,
-        lastName: document.getElementById('last-name').value,
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
         age: document.getElementById('age').value,
         hairColor: document.getElementById('hairColor').value,
         eyeColor: document.getElementById('eyeColor').value,
