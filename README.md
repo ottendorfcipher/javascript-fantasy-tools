@@ -25,7 +25,7 @@ Responses will also have a graphical visual representation.
 
 2. Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application
 
-#### Location: ` assets/js/scripts.js ` & ` form.html `
+####           Location: ` assets/js/scripts.js ` & ` form.html `
 
 3. Visualize data in a graph, chart, or other visual representation of data
 
