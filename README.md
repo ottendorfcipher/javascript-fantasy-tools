@@ -7,9 +7,9 @@ Run `npm install`.
 
 ## Running the App
 
-Run `npm start`. A URL will be shown in the terminal that will be the URL of the API server.
+Run `npm start`
 
-Open the `public/index.html` file either directly in your browser or with Live Server (VS Code).
+Open the `public/index.html`
 
 ## About
 
