@@ -25,12 +25,15 @@ Responses will also have a graphical visual representation.
 
 2. Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application
 
-Location: ` assets/js/scripts.js ` & ` form.html `
+Location: ` public/assets/js/scripts.js ` & ` public/form.html `
 
 3. Visualize data in a graph, chart, or other visual representation of data
 
 4. Create a form and save the values (on click of Submit button) to an external file 
 You must show us or document where that information is being stored so we can confirm that it’s being saved/persisted
+
+Location: ` public/assets/js/main.js ` & ` public/form.html ` , ` data/app.json `
+DEV API Location: `public/assets/js/api.js` , `server/index.js` & `public/assets/js/main.js ` 
 
 5. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
 

@@ -1,5 +1,5 @@
 // Most of the DOM elements that will be interacted with.
-const userForm = document.getElementById("user-form");
+const userForm = document.getElementById("npcForm");
 const userListContainer = document.getElementById("user-list-container");
 const userList = document.getElementById("user-list");
 const userTemplate = document.getElementById("user-template");
