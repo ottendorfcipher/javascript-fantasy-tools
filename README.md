@@ -35,6 +35,8 @@ You must show us or document where that information is being stored so we can co
 5. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
 
 
-Initial project build based on Bootstrap Bare by Start Bootstrap (https://github.com/StartBootstrap/startbootstrap-bare)
+
+## Credit
+Made with server-side help from Justin Prince's Dev API (https://github.com/justinkprince/dev-api)
 
 
