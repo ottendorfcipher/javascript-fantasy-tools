@@ -32,11 +32,12 @@ Location: ` public/assets/js/main.js ` & ` public/form.html ` , ` data/app.json 
 
 DEV API Location: `public/assets/js/api.js` , `server/index.js` & `public/assets/js/main.js ` 
 
-3. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
+3. Implement a regular expression (regex) to ensure a field either a phone number or an email address is always stored and displayed in the same format
+
+4. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
 
 
-
-4. Visualize data in a graph, chart, or other visual representation of data
+5. Visualize data in a graph, chart, or other visual representation of data
 
 
 
