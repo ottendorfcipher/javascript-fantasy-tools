@@ -13,7 +13,7 @@ const { DevApi } = require("@justinkprince/dev-api");
  * - DELETE /users/:userID - to delete a single user.
  */
 const config = {
-  resources: ["users"],
+  resources: ["users", "stats"],
   // This is the file where the data will be saved. Delete the contents to wipe all the data.
   filepath: "./data/app.json",
 };

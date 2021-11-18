@@ -1,16 +1,16 @@
-// DOM elements that will be interacted with.
+// DOM elements
 const npcForm = document.getElementById("npcForm");
 const npcListContainer = document.getElementById("user-list-container");
 const npcList = document.getElementById("user-list");
 const npcTemplate = document.getElementById("user-template");
 const logger = document.getElementById("log");
 
-// An instance of the API helper class.
+// API helper class.
 const api = new Api({
   baseUrl: "http://localhost:3003",
 });
 
-// Write messages to our log element
+// Write to log
 const log = (msg) => {
   logger.prepend(`↳ ${msg}` + "\n");
 };
@@ -26,8 +26,8 @@ const createUserTableRow = (user) => {
   const tr = npcTemplate.content.cloneNode(true);
   const td = tr.querySelectorAll("td");
 
-  // Set the first cell to the user ID (truncated down to 6 characters).
-  td[0].textContent = `${user.id.slice(0, 6)}...`;
+  // Set the first cell to the user ID (truncated down to 4 characters).
+  td[0].textContent = `${user.id.slice(0, 4)}...`;
   // Show the full user ID on mouse hover.
   td[0].title = user.id;
   
@@ -46,9 +46,10 @@ const createUserTableRow = (user) => {
   td[13].textContent = user.primaryAttack;
   td[14].textContent = user.secondaryAttack;
   td[15].textContent = user.specialAbility;
+  td[16].textContent = user.email;
 
   // Add the user ID as the delete button's ID for convenience later on.
-  td[16].querySelector("button").id = user.id;
+  td[17].querySelector("button").id = user.id;
 
   return tr;
 };
@@ -122,10 +123,11 @@ npcForm.addEventListener("submit", (event) => {
   const primaryAttack = event.target.elements["primaryAttack"].value;
   const secondaryAttack = event.target.elements["secondaryAttack"].value;
   const specialAbility = event.target.elements["specialAbility"].value;
+  const email = event.target.elements["email"].value;
 
 
   // Send a POST request with the data to the API.
-  api.post("/users", { firstName , lastName, age, hairColor, eyeColor, complexion, favColorOne, favColorTwo, hairStyle, npcWeight, npcClass, primaryAttack, secondaryAttack, specialAbility }).then((response) => {
+  api.post("/users", { firstName , lastName, age, hairColor, eyeColor, complexion, favColorOne, favColorTwo, hairStyle, npcHeight, npcWeight, npcClass, primaryAttack, secondaryAttack, specialAbility, email }).then((response) => {
     log(`Create new user: ${response.firstName}`);
     // Update the list of NPCs now that it has changed.
     updateNpcList();
@@ -136,3 +138,113 @@ npcForm.addEventListener("submit", (event) => {
 
 // Populate the user list on page load.
 updateNpcList();
+
+
+// --------------- Testing ----------------------------------------
+
+// DOM elements that will be interacted with.
+const statForm = document.getElementById("statForm");
+const statListContainer = document.getElementById("stat-list-container");
+const statList = document.getElementById("stat-list");
+const statTemplate = document.getElementById("stat-template");
+
+  // Create a single table row populated with stat data.
+  const createStatTableRow = (stat) => {
+ 
+  const tr = statTemplate.content.cloneNode(true);
+  const td = tr.querySelectorAll("td");
+
+  // Set the first cell to the stat ID (truncated down to 6 characters).
+  td[0].textContent = `${stat.id.slice(0, 6)}...`;
+  // Show the full stat ID on mouse hover.
+  td[0].title = stat.id;
+  
+  td[1].textContent = stat.firstName;
+  td[2].textContent = stat.lastName;
+
+  // Add the stat ID as the delete button's ID for convenience later on.
+  td[3].querySelector("button").id = stat.id;
+
+  return tr;
+};
+
+// Create several table rows with a collection of stats data.
+const createStatTableRows = (stats) => {
+
+  const fragment = new DocumentFragment();
+
+  // Iterate over the provided stats argument.
+  stats.forEach((stat) => {
+    // Create a row will all the stat's data.
+    const tr = createStatTableRow(stat);
+    // Add the stat table row to the fragment.
+    fragment.appendChild(tr);
+  });
+
+  return fragment;
+};
+
+// Fetch stat data from API and update the stat list in the DOM.
+const updateStatList = () => {
+  api.get("/stats").then((response) => {
+    const stats = response.data;
+    const hasStats = stats.length > 0;
+
+    // Only create stat table rows if there are stats.
+    if (hasStats) {
+      // Get a DocumentFragment containing table rows of stat data.
+      const tr = createStatTableRows(stats);
+      // Replace all the children of the tbody element with our new stat rows.
+      statList.replaceChildren(tr);
+    }
+
+    log(`Fetched ${stats.length} stats.`);
+    // Set the class that determines if the "no stats" message is displayed or not.
+    statListContainer.classList.toggle("has-stats", hasStats);
+  });
+};
+
+// Click listener for deleting stats.
+
+npcList.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target.className === "delete-btn") {
+    const resource = `/stats/${target.id}`;
+    api.delete(resource).then((response) => console.log(response));
+    log(`Delete stat with ID: ${target.id}`);
+    updateStatList();
+  }
+});
+
+// Listener for creating new stats.
+statForm.addEventListener("submit", (event) => {
+  // Prevent reload on submit
+  event.preventDefault();
+
+  // Get the value of the fields.
+  const firstName = event.target.elements["firstName"].value;
+  const lastName = event.target.elements["lastName"].value;
+
+
+
+  // Send a POST request with the data to the API.
+  api.post("/stats", { firstName , lastName }).then((response) => {
+    log(`Create new stat: ${response.firstName}`);
+    // Update the list of NPCs now that it has changed.
+    updateStatList();
+  });
+  // Clear out the input field of its previous value.
+  statForm.reset();
+});
+
+
+
+
+
+
+
+
+
+
+
+

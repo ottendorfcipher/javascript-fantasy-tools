@@ -181,6 +181,14 @@
                 </div>
               </div>
               <div class="row mx-3 mt-3 d-flex justify-content-center">
+                <div class="col-md-9">
+                  <div class="col-md-2 mb-2 mt-4"></div>
+                  <label for="email" class="fantasy-font">E-Mail:</label>
+                  <input id="email" type="text" name="email" placeholder="johndoe@mail.com" class="form-control main-font" />
+                </div>
+                </div>
+              </div>
+              <div class="row mx-3 mt-3 d-flex justify-content-center">
                 <div class="col-md-1 mb-3">
                   <button class="btn btn-outline-primary main-font">Submit</button>
                 </div>
@@ -218,6 +226,7 @@
               <th>Primary Attack</th>
               <th>Secondary Attack</th>
               <th>Special Ability</th>
+              <th>E-mail</th>
               <th></th>
               <th></th>
             </thead>
@@ -245,8 +254,9 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
         <td>
-          <button class="delete-btn">Delete</button>
+          <button class="delete-btn" onclick="ValidateEmail(document.form1.text1)">Delete</button>
         </td>
       </tr>
     </template>

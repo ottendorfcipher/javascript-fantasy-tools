@@ -47,8 +47,32 @@
           </nav>
         <!-- Page content-->
         <div class="container">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-2">
+              <form>
+                <label for="selectRank" class="fantasy-font">Rank</label>
+                <select id="selectRank" type="text" onchange="rankFunction()" name="selectRank" class="form-control main-font">
+                  <option selected>Select rank...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="selectClass" class="fantasy-font">Player Class</label>
+                <select id="selectClass" type="text" onchange="playerClass()" name="selectClass" class="form-control main-font">
+                  <option selected>Select class...</option>
+                </select>
+                <div id="classOfPlayer" style="width: 40px; height: 40px;"></div>
+            </div>
+              </form>
+              <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-2" id="demo"></div>
+              <div class="col-md-4"></div>
+            </div>
             
-        </div>
+          </div>
 
         <!-- Footer-->
         <footer class="bg-light text-center text-lg-start mt-5">
@@ -61,5 +85,7 @@
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Rank JS-->
+        <script src="assets/js/rank.js"></script>
     </body>
 </html>
