@@ -40,9 +40,15 @@ const createUserTableRow = (user) => {
   td[7].textContent = user.favColorOne;
   td[8].textContent = user.favColorTwo;
   td[9].textContent = user.hairStyle;
+  td[10].textContent = user.npcHeight;
+  td[11].textContent = user.npcWeight;
+  td[12].textContent = user.npcClass;
+  td[13].textContent = user.primaryAttack;
+  td[14].textContent = user.secondaryAttack;
+  td[15].textContent = user.specialAbility;
 
   // Add the user ID as the delete button's ID for convenience later on.
-  td[10].querySelector("button").id = user.id;
+  td[16].querySelector("button").id = user.id;
 
   return tr;
 };
@@ -110,10 +116,16 @@ npcForm.addEventListener("submit", (event) => {
   const favColorOne = event.target.elements["favColorOne"].value;
   const favColorTwo = event.target.elements["favColorTwo"].value;
   const hairStyle = event.target.elements["hairStyle"].value;
+  const npcHeight = event.target.elements["npcHeight"].value;
+  const npcWeight = event.target.elements["npcWeight"].value;
+  const npcClass = event.target.elements["npcClass"].value;
+  const primaryAttack = event.target.elements["primaryAttack"].value;
+  const secondaryAttack = event.target.elements["secondaryAttack"].value;
+  const specialAbility = event.target.elements["specialAbility"].value;
 
 
   // Send a POST request with the data to the API.
-  api.post("/users", { firstName , lastName, age, hairColor, eyeColor, complexion, favColorOne, favColorTwo, hairStyle }).then((response) => {
+  api.post("/users", { firstName , lastName, age, hairColor, eyeColor, complexion, favColorOne, favColorTwo, hairStyle, npcWeight, npcClass, primaryAttack, secondaryAttack, specialAbility }).then((response) => {
     log(`Create new user: ${response.firstName}`);
     // Update the list of NPCs now that it has changed.
     updateNpcList();

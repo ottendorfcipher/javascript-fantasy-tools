@@ -252,20 +252,7 @@ npcHeight.appendChild(el);
 // NPC Weight
    
 const npcWeight = document.getElementById("npcWeight");
-let npcHeightOptions = ["Light", "Medium Light", "Medium", "Medium Heavy", "Heavy"];
-
-for(let i = 0; i < npcWeightOptions.length; i++) {
-let opt = npcWeightOptions[i];
-const el = document.createElement("option");
-el.textContent = opt;
-el.value = opt;
-npcWeight.appendChild(el);
-}
-
-// NPC Weight
-   
-const npcWeight = document.getElementById("npcWeight");
-let npcHeightOptions = ["Light", "Medium Light", "Medium", "Medium Heavy", "Heavy"];
+let npcWeightOptions = ["Light", "Medium Light", "Medium", "Medium Heavy", "Heavy"];
 
 for(let i = 0; i < npcWeightOptions.length; i++) {
 let opt = npcWeightOptions[i];
@@ -317,7 +304,7 @@ secondaryAttack.appendChild(el);
 // Special Ability
 
 const specialAbility = document.getElementById("specialAbility");
-let npcClassOptions = ["Invisibility", "Superhuman Strength", "Flying", "Shapeshifting", "Super Speed", "Super Senses", "Weasel", "Telepathy", "Telekinesis", "Teleportation", "Power Absorption", "Regenerative Power", "Object Manipulation", "Element Manipulation", "Animal Transformation", "X-Ray Vision", "Time Bending", "Wealth", "Divinity"];
+let specialAbilityOptions = ["Invisibility", "Superhuman Strength", "Flying", "Shapeshifting", "Super Speed", "Super Senses", "Weasel", "Telepathy", "Telekinesis", "Teleportation", "Power Absorption", "Regenerative Power", "Object Manipulation", "Element Manipulation", "Animal Transformation", "X-Ray Vision", "Time Bending", "Wealth", "Divinity"];
 
 for(let i = 0; i < specialAbilityOptions.length; i++) {
 let opt = specialAbilityOptions[i];

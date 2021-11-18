@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Cinzel+Decorative&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
+
     <script src="./assets/js/api.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
   </head>
@@ -51,15 +53,15 @@
               <div class="row mx-3 d-flex justify-content-center">
                 <div class="col-md-3">
                   <label for="firstName" class="fantasy-font">First Name</label>
-                  <input id="firstName" type="text" name="firstName" placeholder="Ex: Flavius" class="form-control main-font" />
+                  <input id="firstName" type="text" name="firstName" placeholder="Ex: Aryn" class="form-control main-font" />
                 </div>
                 <div class="col-md-3">
                   <label for="lastName" class="fantasy-font">Last Name</label>
-                  <input id="lastName" type="text" name="lastName" placeholder="Ex: Cornelius" class="form-control main-font" />
+                  <input id="lastName" type="text" name="lastName" placeholder="Ex: Sparrowhawk" class="form-control main-font" />
                 </div>
                 <div class="col-md-3">
                   <label for="age" class="fantasy-font">Age</label>
-                  <input id="age" type="text" name="age" placeholder="Ex: 28" class="form-control main-font" />
+                  <input id="age" type="text" name="age" placeholder="Ex: 31" class="form-control main-font" />
                 </div>
               </div>
               <div class="row mx-3 mt-3 d-flex justify-content-center">
@@ -192,7 +194,7 @@
         <div id="user-list-container" class="user-list-container mt-4">
           <h4 class="msg-no-users main-font">No NPCs Currently Displayed</h4>
 
-          <table class="user-list-table table table-striped">
+          <table class="user-list-table table table-striped table-bordered table-hover table-sm" style="font-size:x-small;"> 
             <thead>
               <th>ID</th>
               <th>First Name</th>
@@ -204,6 +206,13 @@
               <th>Favorite Color One</th>
               <th>Favorite Color Two</th>
               <th>Hair Style</th>
+              <th>Height</th>
+              <th>Weight</th>
+              <th>Player Class</th>
+              <th>Primary Attack</th>
+              <th>Secondary Attack</th>
+              <th>Special Ability</th>
+              <th></th>
               <th></th>
             </thead>
             <tbody id="user-list"></tbody>
@@ -214,6 +223,12 @@
 
     <template id="user-template">
       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -244,6 +259,8 @@
     <script src="assets/js/scripts.js"></script>
     <!-- Colors JS-->
     <script src="assets/js/colors.js"></script>
+    <!-- Bootstrap Table JS-->
+    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
   </body>
 
 </html>
