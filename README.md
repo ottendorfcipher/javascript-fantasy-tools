@@ -21,24 +21,26 @@ Responses will also have a graphical visual representation.
 
 ## Feature List:
 
-1. Read and parse an external file (such as JSON or CSV) into your application and display some data from that in your app
-
-
-
-2. Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application
+1. Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application
 
 Location: ` public/assets/js/scripts.js ` & ` public/form.html `
 
-3. Visualize data in a graph, chart, or other visual representation of data
-
-4. Create a form and save the values (on click of Submit button) to an external file 
+2. Create a form and save the values (on click of Submit button) to an external file 
 You must show us or document where that information is being stored so we can confirm that it’s being saved/persisted
 
 Location: ` public/assets/js/main.js ` & ` public/form.html ` , ` data/app.json `
 
 DEV API Location: `public/assets/js/api.js` , `server/index.js` & `public/assets/js/main.js ` 
 
-5. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
+3. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
+
+
+
+4. Visualize data in a graph, chart, or other visual representation of data
+
+
+
+
 
 
 
