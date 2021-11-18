@@ -23,6 +23,9 @@
 
     <script src="./assets/js/api.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+
+    <!-- JQuery (CDN) JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -53,7 +56,6 @@
       <div class="text-center mt-5 main-font">
         <h1>Build Your Own Fantasy Character</h1>
       </div>
-
           <form id="npcForm">
             <fieldset>
               <div class="row mx-3 d-flex justify-content-center">
@@ -183,6 +185,7 @@
               <div class="row mx-3 mt-3 d-flex justify-content-center">
                 <div class="col-md-9">
                   <div class="col-md-2 mb-2 mt-4"></div>
+
                   <label for="email" class="fantasy-font">E-Mail:</label>
                   <input id="email" type="text" name="email" placeholder="johndoe@mail.com" class="form-control main-font" />
                 </div>
@@ -190,13 +193,13 @@
               </div>
               <div class="row mx-3 mt-3 d-flex justify-content-center">
                 <div class="col-md-1 mb-3">
-                  <button class="btn btn-outline-primary main-font">Submit</button>
+                  <button id="submitNpcForm" class="btn btn-outline-primary main-font">Submit</button>
                 </div>
               </div>
             </fieldset>
           </form>
           <div class="row">
-            <div id="log" class="log col-sm-8 main-font" style="margin: auto; height: 8vh;">
+            <div id="log" class="log col-sm-2 main-font" style="margin: auto; height: 8vh;">
 
             </div>
           </div>
@@ -256,7 +259,7 @@
         <td></td>
         <td></td>
         <td>
-          <button class="delete-btn" onclick="ValidateEmail(document.form1.text1)">Delete</button>
+          <button class="delete-btn">Delete</button>
         </td>
       </tr>
     </template>
@@ -273,10 +276,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="assets/js/scripts.js"></script>
-    <!-- Colors JS-->
-    <script src="assets/js/colors.js"></script>
-    <!-- Bootstrap Table JS-->
-    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+    <!-- email validate JS-->
+    <script src="./assets/js/emailvalidate.js"></script>
   </body>
 
 </html>
