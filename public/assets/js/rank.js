@@ -32,29 +32,16 @@ selectClass.appendChild(el);
 
 }
 
+// Status Effects
 
-// Create NPC Object 
-let player = [];
+const statusEffects = document.getElementById("statusEffects");
+let statusEffectsOptions = ["Increased Attack", "Increased HP", "Increased Defense"];
 
-const addPlayer = (ev)=>{
-    ev.preventDefault();
-    let npc = {
-        id: Date.now(),
-        class: document.getElementById('selectClass').value,
-        rank: document.getElementById('selectRank').value,
-    }
+for(let i = 0; i < statusEffectsOptions.length; i++) {
+let opt = statusEffectsOptions[i];
+const el = document.createElement("option");
+el.textContent = opt;
+el.value = opt;
+statusEffects.appendChild(el); 
 
-    player.push(player);
-    document.forms[0].reset(); 
-
-
-    console.warn('added' , {player} );
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' + JSON.stringify(player, '\t', 2);
-
-    localStorage.setItem('statsJson', JSON.stringify(player) );
 }
-
-    document.addEventListener('DOMContentLoaded', ()=>{
-    document.getElementById('btn').addEventListener('click', addPlayer);
-});

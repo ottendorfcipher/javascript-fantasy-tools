@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Project Management Tool</title>
+    <title>Fantasy Project Management Tool</title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
@@ -53,9 +53,17 @@
     </nav>
 
     <main class="container">
-      <div class="text-center mt-5 main-font">
-        <h1>Build Your Own Fantasy Character</h1>
-      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="text-center mt-5 main-font">
+            <h1>Build Your Own Fantasy Character</h1>
+            <hr>
+            <br>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>  
           <form id="npcForm">
             <fieldset>
               <div class="row mx-3 d-flex justify-content-center">
@@ -186,8 +194,8 @@
                 <div class="col-md-9">
                   <div class="col-md-2 mb-2 mt-4"></div>
 
-                  <label for="email" class="fantasy-font">E-Mail:</label>
-                  <input id="email" type="text" name="email" placeholder="johndoe@mail.com" class="form-control main-font" />
+                  <label for="email" class="fantasy-font">E-Mail: (required)</label>
+                  <input id="email" type="text" name="email" placeholder="johndoe@mail.com" class="form-control main-font" required />
                 </div>
                 </div>
               </div>
@@ -195,6 +203,7 @@
                 <div class="col-md-1 mb-3">
                   <button id="submitNpcForm" class="btn btn-outline-primary main-font">Submit</button>
                 </div>
+                <p class="main-font" style="font-size: small; text-align: center;">Note: Form will not submit if an inputted e-mail is invalid.</p>
               </div>
             </fieldset>
           </form>
@@ -206,11 +215,14 @@
           <div class="row">
             <button id="clear-log-btn" class="col-sm-2 mt-3 btn btn-outline-danger main-font" style="margin: auto;">Clear</button>
           </div>
-        </div>
-
-        <div id="user-list-container" class="user-list-container mt-4">
-          <h4 class="msg-no-users main-font">No NPCs Currently Displayed</h4>
-
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div id="user-list-container" class="user-list-container mt-4 col-md-6" style="text-align: center;">
+              <h4 class="msg-no-users main-font">No NPCs Currently Displayed</h4>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          
           <table class="user-list-table table table-striped table-bordered table-hover table-sm" style="font-size:x-small;"> 
             <thead>
               <th>ID</th>
