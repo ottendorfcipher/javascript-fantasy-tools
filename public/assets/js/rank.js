@@ -97,7 +97,7 @@ let selectRankOptions = rank.map(a => a.rank);
 let statusEffectOptions = statusEffect.map(a => a.effect);
 
 function rank() {
-   
+
 }
 
 function playerClass()
@@ -109,7 +109,7 @@ function statusEffect() {
    
 }
 
-document.getElementById("").addEventListener("click", function() {
+document.getElementById("startButton").addEventListener("click", function() {
    attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
    defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[2].defense;
 });
