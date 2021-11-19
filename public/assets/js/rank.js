@@ -152,3 +152,8 @@ for( let i = 0; i < statusEffectOptions.length; i++ ) {
       statusEffects.appendChild(el); 
 
 }
+
+function init() {
+   console.log('works')
+ }
+ window.onload = init();
