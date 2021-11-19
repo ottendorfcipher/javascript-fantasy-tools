@@ -109,7 +109,6 @@ document.getElementById("startButton").addEventListener("click", function() {
 
    var theStatusEffects = document.getElementById('statusEffects');
    var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex].index;
-   console.log(theClassSelectOption);
 
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
@@ -152,8 +151,3 @@ for( let i = 0; i < statusEffectOptions.length; i++ ) {
       statusEffects.appendChild(el); 
 
 }
-
-function init() {
-   console.log('works')
- }
- window.onload = init();
