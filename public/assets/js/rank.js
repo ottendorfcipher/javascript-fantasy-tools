@@ -109,6 +109,8 @@ document.getElementById("startButton").addEventListener("click", function() {
 
    var theStatusEffects = document.getElementById('statusEffects');
    var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex].index;
+   
+   console.log(theStatusEffectsOption);
 
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
