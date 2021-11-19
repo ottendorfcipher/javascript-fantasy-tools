@@ -99,7 +99,7 @@ let selectRankOptions = rank.map(a => a.rank);
 let statusEffectOptions = statusEffect.map(a => a.effect);
 
 
-function calculateStats() {
+document.getElementById("startButton").addEventListener("click", function() {
 
    var theSelectRank = document.getElementById('selectRank');
    var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex].index;
@@ -114,7 +114,7 @@ function calculateStats() {
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
 
-};
+});
 
 
 const selectRank = document.getElementById("selectRank");
