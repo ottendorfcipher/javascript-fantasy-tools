@@ -90,7 +90,7 @@ const statusEffect = [
    {
       effect: "Increased Defense",
       attack: 0,
-      defense: 4
+      defense: 4,
    },
 ];
 
@@ -101,7 +101,7 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 
 document.getElementById("startButton").addEventListener("click", function() {
    attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
-   defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[2].defense;
+   defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[1].defense;
 });
 
 
