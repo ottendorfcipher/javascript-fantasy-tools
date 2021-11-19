@@ -105,10 +105,11 @@ function calculateStats() {
    var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
 
    var theClassSelect = document.getElementById('selectClass');
-   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
+   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex].value;
 
    var theStatusEffects = document.getElementById('statusEffects');
    var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
+   console.log(theClassSelectOption);
 
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
