@@ -100,8 +100,8 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 
 
 document.getElementById("startButton").addEventListener("click", function() {
-   attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
-   defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[1].defense;
+   attack.innerHTML = classes[selectedIndex].attack + rank[selectedIndex].attack + statusEffect[selectedIndex].attack;
+   defense.innerHTML = classes[selectedIndex].defense + rank[selectedIndex].defense + statusEffect[selectedIndex].defense;
 });
 
 
