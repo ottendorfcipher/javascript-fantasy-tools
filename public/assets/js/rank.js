@@ -102,13 +102,13 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 function calculateStats() {
 
    var theSelectRank = document.getElementById('selectRank');
-   var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
+   var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex].index;
 
    var theClassSelect = document.getElementById('selectClass');
-   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex].value;
+   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex].index;
 
    var theStatusEffects = document.getElementById('statusEffects');
-   var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
+   var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex].index;
    console.log(theClassSelectOption);
 
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
