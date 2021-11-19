@@ -99,28 +99,21 @@ let selectRankOptions = rank.map(a => a.rank);
 let statusEffectOptions = statusEffect.map(a => a.effect);
 
 
-document.getElementById("startButton").addEventListener("click", function() {
-
+function calculateStats() {
 
       var theSelectRank = document.getElementById('selectRank');
       var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
    
-   rank();
-
       var theClassSelect = document.getElementById('selectClass');
       var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
-
-   playerClass();
 
       var theStatusEffects = document.getElementById('statusEffects');
       var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
 
-   statusEffect();
-
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
 
-});
+};
 
 
 const selectRank = document.getElementById("selectRank");
