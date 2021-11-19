@@ -104,7 +104,26 @@ document.getElementById("startButton").addEventListener("click", function() {
    defense.innerHTML = classes[selectedIndex].defense + rank[selectedIndex].defense + statusEffect[selectedIndex].defense;
 });
 
+function rank() {
+   var select = document.getElementById('selectRank');
+   var option = select.options[select.selectedIndex];
+}
 
+rank();
+
+function playerClass() {
+   var select = document.getElementById('selectClass');
+   var option = select.options[select.selectedIndex];
+}
+
+playerClass();
+
+function statusEffect() {
+   var select = document.getElementById('statusEffects');
+   var option = select.options[select.selectedIndex];
+}
+
+statusEffect();
 
 const selectRank = document.getElementById("selectRank");
 
