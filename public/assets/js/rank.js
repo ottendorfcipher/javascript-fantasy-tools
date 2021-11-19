@@ -100,30 +100,41 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 
 
 document.getElementById("startButton").addEventListener("click", function() {
-   attack.innerHTML = classes[selectedIndex].attack + rank[selectedIndex].attack + statusEffect[selectedIndex].attack;
-   defense.innerHTML = classes[selectedIndex].defense + rank[selectedIndex].defense + statusEffect[selectedIndex].defense;
+   var theClassSelect = document.getElementById('selectClass');
+   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
+
+   var theSelectRank = document.getElementById('selectRank');
+   var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
+
+   var theStatusEffects = document.getElementById('statusEffects');
+   var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
+
+   attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
+   defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
+
+   function rank() {
+      var select = document.getElementById('selectRank');
+      var option = select.options[select.selectedIndex];
+   }
+   
+   rank();
+
+   function playerClass() {
+      var select = document.getElementById('selectClass');
+      var option = select.options[select.selectedIndex]; 
+   }
+
+   playerClass();
+
+   function statusEffect() {
+      var select = document.getElementById('statusEffects');
+      var option = select.options[select.selectedIndex];
+   }
+
+   statusEffect();
+
 });
 
-function rank() {
-   var select = document.getElementById('selectRank');
-   var option = select.options[select.selectedIndex];
-}
-
-rank();
-
-function playerClass() {
-   var select = document.getElementById('selectClass');
-   var option = select.options[select.selectedIndex];
-}
-
-playerClass();
-
-function statusEffect() {
-   var select = document.getElementById('statusEffects');
-   var option = select.options[select.selectedIndex];
-}
-
-statusEffect();
 
 const selectRank = document.getElementById("selectRank");
 
