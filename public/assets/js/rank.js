@@ -97,7 +97,7 @@ let selectRankOptions = rank.map(a => a.rank);
 let statusEffectOptions = statusEffect.map(a => a.effect);
 
 function rank() {
-
+   
 }
 
 function playerClass()
@@ -109,8 +109,12 @@ function statusEffect() {
    
 }
 
-attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
-defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[2].defense;
+document.getElementById("").addEventListener("click", function() {
+   attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
+   defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[2].defense;
+});
+
+
 
 const selectRank = document.getElementById("selectRank");
 
