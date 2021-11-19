@@ -120,6 +120,7 @@ document.getElementById("startButton").addEventListener("click", function() {
 });
 
 
+
 const selectRank = document.getElementById("selectRank");
 
 for( let i = 0; i < selectRankOptions.length; i++ ) {
