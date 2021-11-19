@@ -100,38 +100,30 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 
 
 document.getElementById("startButton").addEventListener("click", function() {
-   var theClassSelect = document.getElementById('selectClass');
-   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
-
-   var theSelectRank = document.getElementById('selectRank');
-   var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
-
-   var theStatusEffects = document.getElementById('statusEffects');
-   var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
-
-   attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
-   defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
 
    function rank() {
-      var select = document.getElementById('selectRank');
-      var option = select.options[select.selectedIndex];
+      var theSelectRank = document.getElementById('selectRank');
+      var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
    }
    
    rank();
 
    function playerClass() {
-      var select = document.getElementById('selectClass');
-      var option = select.options[select.selectedIndex]; 
+      var theClassSelect = document.getElementById('selectClass');
+      var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
    }
 
    playerClass();
 
    function statusEffect() {
-      var select = document.getElementById('statusEffects');
-      var option = select.options[select.selectedIndex];
+      var theStatusEffects = document.getElementById('statusEffects');
+      var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
    }
 
    statusEffect();
+
+   attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
+   defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
 
 });
 
