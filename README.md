@@ -38,10 +38,7 @@ Location: ` public/assets/js/emailvalidate.js ` , `public/form.html `
 
 4. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
 
-
-
-
-5. Visualize data in a graph, chart, or other visual representation of data
+Location: 
 
 
 
