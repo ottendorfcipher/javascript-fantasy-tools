@@ -1,47 +1,124 @@
 // Rank
 
-let rank = []
+const classes = [
+   {
+       name: "Fighter",
+       attack: 2,
+       defense: -1,
+   },
+   {        
+       name: "Assassin",
+       attack: 2,
+       defense: -1,
+   },
+   {
+      name: "Mage",
+      attack: 1,
+      defense: -2,
+   },
+   {
+      name: "Archer",
+      attack: 1,
+      defense: -2,
+   },
+   {
+      name: "Beserker",
+      attack: 2,
+      defense: -4,
+   },
+   {
+      name: "Priest",
+      attack: 1,
+      defense: -2,
+   },
+   {
+      name: "Necromancer",
+      attack: 0,
+      defense: -3,
+   },
+   {
+      name: "Bard",
+      attack: 0,
+      defense: -3,
+   },
+   {
+      name: "Jack-of-all-Trades",
+      attack: 1,
+      defense: -2,
+   }
+];
 
-for (var i = 1; i <= 5; i++) {
-   rank.push(i);
-}
+const rank = [
+   {
+      rank: "Beginner",
+      level: 1,
+   },
+   {
+      rank: "Apprentice",
+      level: 2,
+   },
+   {
+      rank: "Journeyman",
+      level: 3,
+   },
+   {
+      rank: "On the Council",
+      level: 4,
+   },
+   {
+      rank: "Master",
+      level: 5,
+   },
+];
+
+const statusEffect = [
+   {
+      effect: "Increased Attack",
+      increasedAttack: 4,
+   },
+   {
+      effect: "Increased Defense",
+      increasedDefense: 4,
+   },
+];
+
+let selectClassOptions = classes.map(a => a.name);
+let selectRankOptions = rank.map(a => a.rank);
+let statusEffectOptions = statusEffect.map(a => a.effect);
+
 
 const selectRank = document.getElementById("selectRank");
-let selectRankOptions = rank;
 
-for(let i = 0; i < selectRankOptions.length; i++) {
-let opt = selectRankOptions[i];
-const el = document.createElement("option");
-el.textContent = opt;
-el.value = opt;
-selectRank.appendChild(el); 
-
+for( let i = 0; i < selectRankOptions.length; i++ ) {
+   let opt = selectRankOptions[i];
+   const el = document.createElement("option");
+   el.textContent = opt;
+   el.value = opt;
+   selectRank.appendChild(el); 
 }
 
 // Class
 
 const selectClass = document.getElementById("selectClass");
-let selectClassOptions = ["Fighter", "Assassin", "Mage", "Archer", "Beserker", "Healer", "Necromancer", "Bard", "Jack-of-all-Trades"];
 
-for(let i = 0; i < selectClassOptions.length; i++) {
-let opt = selectClassOptions[i];
-const el = document.createElement("option");
-el.textContent = opt;
-el.value = opt;
-selectClass.appendChild(el); 
+for( let i = 0; i < selectClassOptions.length; i++ ) {
+   let opt = selectClassOptions[i];
+   const el = document.createElement("option");
+   el.textContent = opt;
+   el.value = opt;
+   selectClass.appendChild(el); 
 
 }
 
 // Status Effects
 
 const statusEffects = document.getElementById("statusEffects");
-let statusEffectsOptions = ["Increased Attack", "Increased HP", "Increased Defense"];
 
-for(let i = 0; i < statusEffectsOptions.length; i++) {
-let opt = statusEffectsOptions[i];
-const el = document.createElement("option");
-el.textContent = opt;
-el.value = opt;
-statusEffects.appendChild(el); 
+for( let i = 0; i < statusEffectsOptions.length; i++ ) {
+   let opt = statusEffectsOptions[i];
+   const el = document.createElement("option");
+   el.textContent = opt;
+   el.value = opt;
+   statusEffects.appendChild(el); 
 
 }
