@@ -101,14 +101,14 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 
 function calculateStats() {
 
-      var theSelectRank = document.getElementById('selectRank');
-      var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
-   
-      var theClassSelect = document.getElementById('selectClass');
-      var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
+   var theSelectRank = document.getElementById('selectRank');
+   var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
 
-      var theStatusEffects = document.getElementById('statusEffects');
-      var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
+   var theClassSelect = document.getElementById('selectClass');
+   var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
+
+   var theStatusEffects = document.getElementById('statusEffects');
+   var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
 
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
@@ -131,11 +131,11 @@ for( let i = 0; i < selectRankOptions.length; i++ ) {
 const selectClass = document.getElementById("selectClass");
 
 for( let i = 0; i < selectClassOptions.length; i++ ) {
-   let opt = selectClassOptions[i];
-   const el = document.createElement("option");
-   el.textContent = opt;
-   el.value = opt;
-   selectClass.appendChild(el); 
+      let opt = selectClassOptions[i];
+      const el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      selectClass.appendChild(el); 
 
 }
 
@@ -144,10 +144,10 @@ for( let i = 0; i < selectClassOptions.length; i++ ) {
 const statusEffects = document.getElementById("statusEffects");
 
 for( let i = 0; i < statusEffectOptions.length; i++ ) {
-   let opt = statusEffectOptions[i];
-   const el = document.createElement("option");
-   el.textContent = opt;
-   el.value = opt;
-   statusEffects.appendChild(el); 
+      let opt = statusEffectOptions[i];
+      const el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      statusEffects.appendChild(el); 
 
 }
