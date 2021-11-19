@@ -85,10 +85,12 @@ const statusEffect = [
    {
       effect: "Increased Attack",
       attack: 4,
+      defense: 0,
    },
    {
       effect: "Increased Defense",
-      attack: 4,
+      attack: 0,
+      defense: 4
    },
 ];
 
