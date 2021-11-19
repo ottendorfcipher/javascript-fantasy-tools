@@ -52,33 +52,43 @@ const rank = [
    {
       rank: "Beginner",
       level: 1,
+      attack: 1,
+      defense: 1,
    },
    {
       rank: "Apprentice",
       level: 2,
+      attack: 3,
+      defense: 3,
    },
    {
       rank: "Journeyman",
       level: 3,
+      attack: 6,
+      defense: 6,
    },
    {
       rank: "On the Council",
       level: 4,
+      attack: 7,
+      defense: 7,
    },
    {
       rank: "Master",
       level: 5,
+      attack: 10,
+      defense: 10,
    },
 ];
 
 const statusEffect = [
    {
       effect: "Increased Attack",
-      increasedAttack: 4,
+      attack: 4,
    },
    {
       effect: "Increased Defense",
-      increasedDefense: 4,
+      attack: 4,
    },
 ];
 
@@ -86,6 +96,21 @@ let selectClassOptions = classes.map(a => a.name);
 let selectRankOptions = rank.map(a => a.rank);
 let statusEffectOptions = statusEffect.map(a => a.effect);
 
+function rank() {
+
+}
+
+function playerClass()
+{
+
+}
+
+function statusEffect() {
+   
+}
+
+attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
+defense.innerHTML = classes[2].defense + rank[2].defense + statusEffect[2].defense;
 
 const selectRank = document.getElementById("selectRank");
 

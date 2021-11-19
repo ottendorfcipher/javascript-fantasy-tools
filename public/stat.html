@@ -52,7 +52,7 @@
             <div class="col-md-2">
               <form>
                 <label for="selectRank" class="fantasy-font">Rank</label>
-                <select id="selectRank" type="text" onchange="rankFunction()" name="selectRank" class="form-control main-font">
+                <select id="selectRank" type="text" onchange="rank()" name="selectRank" class="form-control main-font">
                   <option selected>Select rank...</option>
                 </select>
             </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-md-2">
               <label for="statusEffects" class="fantasy-font">Status Effects</label>
-              <select id="statusEffects" type="text" onchange="statusEffects()" name="statusEffects" class="form-control main-font">
+              <select id="statusEffects" type="text" onchange="statusEffect()" name="statusEffects" class="form-control main-font">
                 <option selected>Select effect...</option>
               </select>
           </div>
@@ -73,11 +73,10 @@
               <div class="col-md-4"></div>
             </div>
             <div class="row">
-              <div class="col-md-4"></div>
-              <div class="col-md-4" id="demo">
-
-              </div>
-              <div class="col-md-4"></div>
+              <div class="col-md-3"></div>
+              <div class="col-md-3" id="attack"></div>
+              <div class="col-md-3" id="defense"></div>
+              <div class="col-md-3"></div>
             </div>
             
           </div>
