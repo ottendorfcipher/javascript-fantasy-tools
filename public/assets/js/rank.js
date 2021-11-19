@@ -131,8 +131,8 @@ for( let i = 0; i < selectClassOptions.length; i++ ) {
 
 const statusEffects = document.getElementById("statusEffects");
 
-for( let i = 0; i < statusEffectsOptions.length; i++ ) {
-   let opt = statusEffectsOptions[i];
+for( let i = 0; i < statusEffectOptions.length; i++ ) {
+   let opt = statusEffectOptions[i];
    const el = document.createElement("option");
    el.textContent = opt;
    el.value = opt;
