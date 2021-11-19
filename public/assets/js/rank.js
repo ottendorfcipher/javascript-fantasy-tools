@@ -109,7 +109,7 @@ function calculateStats() {
 
    var theStatusEffects = document.getElementById('statusEffects');
    var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex].index;
-   console.log(classes[theClassSelectOption]);
+   console.log(theClassSelectOption);
 
    attack.innerHTML = classes[theClassSelectOption].attack + rank[theSelectRankOption].attack + statusEffect[theStatusEffectsOption].attack;
    defense.innerHTML = classes[theClassSelectOption].defense + rank[theSelectRankOption].defense + statusEffect[theStatusEffectsOption].defense;
