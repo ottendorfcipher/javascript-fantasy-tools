@@ -13,11 +13,9 @@ Open the `public/index.html`
 
 ## About
 
-This is a custom app built for the primary of creating, viewing, modifying, and exporting data into the .json format. From there, certain types of data are tagged to be viewed by certain people. 
+Initially I designed this project with the thought of creating a website that could be updated regularly by the creators of an RPG game. The website would allow for developers and artists to get critical data from one another about a fantasy world. As I worked on the project more, I found it compelling and fun to develop a NPC generator and Fantasy Character Stat calculator. 
 
-As a simple proof-of-concept, the project will store user-inputted data about a fantasy world. Data is inputted on a form and then sent to a table for public viewing as well as views for certain people (such as artists, developers, business leads, etc.).
-
-Responses will also have a graphical visual representation.
+The end result is a simple platform where people can create characters and view possible character statistics locally. I am looking forward to refactoring this in the near future using many of the skills gained in the JavaScript Code Louisville course.
 
 ## Feature List:
 
@@ -36,17 +34,16 @@ DEV API Location: `public/assets/js/api.js` , `server/index.js` & `public/assets
 
 Location: ` public/assets/js/emailvalidate.js ` , `public/form.html `
 
-4. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
+## Additional Features:
 
-Location: 
+- Colors display on form through array data on ` public/form.html ` using  `public/assets/js/scripts.js`
 
+- Fantasy Character Stat Calculator on ` stat.html ` and `public/assets/js/rank.js `
 
-
-
-
+- Bootstrap 5 Responsive Layout
 
 
 ## Credit
-Made with server-side help from Justin Prince's Dev API (https://github.com/justinkprince/dev-api)
+Form made with server-side help from Justin Prince's Dev API (https://github.com/justinkprince/dev-api). 
 
 
