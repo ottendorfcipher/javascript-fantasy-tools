@@ -101,24 +101,19 @@ let statusEffectOptions = statusEffect.map(a => a.effect);
 
 document.getElementById("startButton").addEventListener("click", function() {
 
-   function rank() {
+
       var theSelectRank = document.getElementById('selectRank');
       var theSelectRankOption = theSelectRank.options[theSelectRank.selectedIndex];
-   }
    
    rank();
 
-   function playerClass() {
       var theClassSelect = document.getElementById('selectClass');
       var theClassSelectOption = theClassSelect.options[theClassSelect.selectedIndex];
-   }
 
    playerClass();
 
-   function statusEffect() {
       var theStatusEffects = document.getElementById('statusEffects');
       var theStatusEffectsOption = theStatusEffects.options[theStatusEffects.selectedIndex];
-   }
 
    statusEffect();
 
