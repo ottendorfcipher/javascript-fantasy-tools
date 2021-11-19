@@ -1,5 +1,5 @@
 {
-  "name": "dev-api-example",
+  "name": "dev-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justinkprince/dev-api-example.git"
+    "url": "git+https://github.com/justinkprince/dev-api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/justinkprince/dev-api-example/issues"
+    "url": "https://github.com/justinkprince/dev-api/issues"
   },
-  "homepage": "https://github.com/justinkprince/dev-api-example#readme",
+  "homepage": "https://github.com/justinkprince/dev-api#readme",
   "dependencies": {
     "@justinkprince/dev-api": "^1.7.0"
   }
