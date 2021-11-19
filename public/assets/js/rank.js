@@ -96,18 +96,6 @@ let selectClassOptions = classes.map(a => a.name);
 let selectRankOptions = rank.map(a => a.rank);
 let statusEffectOptions = statusEffect.map(a => a.effect);
 
-function rank() {
-
-}
-
-function playerClass()
-{
-
-}
-
-function statusEffect() {
-   
-}
 
 document.getElementById("startButton").addEventListener("click", function() {
    attack.innerHTML = classes[1].attack + rank[1].attack + statusEffect[1].attack;
