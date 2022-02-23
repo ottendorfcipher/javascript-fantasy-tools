@@ -1,5 +1,5 @@
 
-# Project Management App
+# JavaScript Fantasy Tools
 
 ## Installation
 
